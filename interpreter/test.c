@@ -1,7 +1,6 @@
 #include "reg.h"
 #include "instructions.h"
 #include "commands.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 int main() {

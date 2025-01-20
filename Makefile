@@ -4,16 +4,19 @@ files = $(dir)/reg.c \
 		$(dir)/commands.c \
 		$(dir)/instructions.c
 
-headers = $(dir)/reg.h
+headers = $(dir)/reg.h \
+	  $(dir)/commands.h \
+	  $(dir)/instructions.h
+
 exec = interpreter/interpreter.out
 
 
 # for actual building
 
-build:		$(files)  $(headers)
+build:		$(main)  $(files)  $(headers)
 	gcc $(main) $(files) -o $(exec) -Wall
 
-run:		compile
+run:		build
 	./$(exec)
 
 clean:
@@ -26,7 +29,7 @@ clean:
 test = $(dir)/test.c
 testexec = $(dir)/test.out
 
-testcompile:
+testcompile:	$(test)  $(files)  $(headers)
 	gcc $(test) $(files) -o $(testexec) -Wall
 
 test:		testcompile
