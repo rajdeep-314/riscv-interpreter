@@ -77,7 +77,26 @@ void and(reg* rd, reg rs1, reg rs2){
 
 
 // Register-Register instructions
-/* void sll(reg* rd, reg rs1, reg rs2) { */
-/*     rd->value = rs1 << imm_ma */
-/* } */
+void sll(reg* rd, reg rs1, reg rs2) {
+    rd->value = rs1.value << mask(rs2.value, 5);
+}
 
+void srl(reg* rd, reg rs1, reg rs2) {
+    unsigned int val = rs1.value;
+    val = val >> mask(rs2.value, 5);
+    rd->value = val;
+}
+
+void sra(reg* rd, reg rs1, reg rs2) {
+    rd->value = rs1.value >> mask(rs2.value, 5);
+}
+
+void slt(reg* rd, reg rs1, reg rs2) {
+    rd->value = (rs1.value < rs2.value) ? 1 : 0;
+}
+
+void sltu(reg* rd, reg rs1, reg rs2) {
+    unsigned int val1 = rs1.value,
+                 val2 = rs2.value;
+    rd->value = (val1 < val2) ? 1 : 0;
+}
