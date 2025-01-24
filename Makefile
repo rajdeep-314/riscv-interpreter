@@ -2,11 +2,13 @@ dir = interpreter
 main = $(dir)/main.c
 files = $(dir)/reg.c \
 		$(dir)/commands.c \
-		$(dir)/instructions.c
+		$(dir)/instructions.c \
+		$(dir)/utils.c
 
 headers = $(dir)/reg.h \
 	  $(dir)/commands.h \
-	  $(dir)/instructions.h
+	  $(dir)/instructions.h \
+	  $(dir)/utils.h
 
 exec = interpreter/interpreter.out
 

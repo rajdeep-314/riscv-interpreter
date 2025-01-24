@@ -19,4 +19,6 @@ Currently implemented:
 - slli (shift left logical immediate)
 - srli
 - srai (shift right arithmetic immediate)
+- slti
+- sltiu
 
