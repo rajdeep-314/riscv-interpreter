@@ -10,18 +10,6 @@
 - reg-imm instructions
     - auipc
 
-- reg-reg instructions
-    - add
-    - sub
-    - xor
-    - or
-    - and
-    - sll
-    - srl
-    - sra
-    - slt
-    - sltu
-
 - memory instructions
     - lb
     - lw

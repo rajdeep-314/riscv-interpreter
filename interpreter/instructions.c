@@ -54,6 +54,9 @@ void sltiu(reg* rd, reg rs1, int imm) {
 void lui(reg* rd, int imm) {
     rd->value = imm << 12;
 }
+
+
+// Register-Register instructions
 void add(reg*rd, reg rs1, reg rs2){
     rd->value = rs1.value + rs2.value;
 }
@@ -74,9 +77,6 @@ void and(reg* rd, reg rs1, reg rs2){
     rd -> value = rs1.value & rs2.value;
 }
 
-
-
-// Register-Register instructions
 void sll(reg* rd, reg rs1, reg rs2) {
     rd->value = rs1.value << mask(rs2.value, 5);
 }
