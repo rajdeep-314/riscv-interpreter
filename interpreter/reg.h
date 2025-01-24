@@ -1,7 +1,6 @@
-// include the #IFNDEF stuff here in the future
+#pragma once
 
-
-typedef struct reg {
+typedef struct {
     int value;
 } reg;
 

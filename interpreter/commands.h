@@ -1,4 +1,4 @@
-// include the #IFNDEF stuff here in the future
+#pragma once
 
 
 void print_reg(reg*);

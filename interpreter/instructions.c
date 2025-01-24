@@ -79,9 +79,9 @@ void and(reg* rd, reg rs1, reg rs2){
 
 // Register-Register instructions
 void sll(reg* rd, reg rs1, reg rs2) {
-// Masking is used so that we can only shift up to 32 bits. 
-// We store the value 32 in these 5 bits, 
-// and then use the AND operator to extract those 5 bits for shifting.
+    // Masking is used so that we can only shift up to 32 bits. 
+    // We store the value 32 in these 5 bits, 
+    // and then use the AND operator to extract those 5 bits for shifting.
     rd->value = rs1.value << mask(rs2.value, 5);
 }
 

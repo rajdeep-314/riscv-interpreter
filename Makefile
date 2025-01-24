@@ -3,12 +3,16 @@ main = $(dir)/main.c
 files = $(dir)/reg.c \
 		$(dir)/commands.c \
 		$(dir)/instructions.c \
-		$(dir)/utils.c
+		$(dir)/utils.c \
+		$(dir)/globals.c \
+		$(dir)/mem.c
 
 headers = $(dir)/reg.h \
 	  $(dir)/commands.h \
 	  $(dir)/instructions.h \
-	  $(dir)/utils.h
+	  $(dir)/utils.h \
+	  $(dir)/globals.h \
+	  $(dir)/mem.h
 
 exec = interpreter/interpreter.out
 
