@@ -12,13 +12,18 @@ Formats:
 
 Currently implemented:
 
-- addi
-- xori
-- ori
-- andi
-- slli (shift left logical immediate)
-- srli
-- srai (shift right arithmetic immediate)
-- slti
-- sltiu
+- Register-Immediate instructions
+    - addi
+    - xori
+    - ori
+    - andi
+    - slli (shift left logical immediate)
+    - srli
+    - srai (shift right arithmetic immediate)
+    - slti
+    - sltiu
+    - lui
 
+- Register-Register instructions
+    - add
+    - ...

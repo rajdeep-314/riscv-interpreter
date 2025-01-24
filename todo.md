@@ -8,9 +8,6 @@
 # Instructions to add
 
 - reg-imm instructions
-    - slti
-    - sltiu
-    - lui
     - auipc
 
 - reg-reg instructions
