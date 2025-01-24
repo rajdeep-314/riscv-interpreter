@@ -1,6 +1,7 @@
 #include "reg.h"
 
 
+// Register-Immediate instructions
 void addi(reg* rd, reg* rs1, int imm) {
     rd->value = rs1->value + imm;
 }
@@ -31,3 +32,7 @@ void srli(reg* rd, reg* rs1, int imm) {
 void srai(reg* rd, reg* rs1, int imm) {
     rd->value = rs1->value >> imm;
 }
+
+
+// Register-Register instructions
+
