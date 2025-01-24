@@ -1,3 +1,10 @@
+# Immediate to-do
+
+- Work on memory layout
+    - Implement the load and store instructions
+    - Be very careful about the order and stuff
+
+
 # To do
 
 - Add the `#ifndef` stuff to header files

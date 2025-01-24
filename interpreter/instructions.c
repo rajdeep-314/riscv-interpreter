@@ -1,8 +1,11 @@
 #include "reg.h"
 #include "utils.h"
+#include "globals.h"
+
 
 
 // Register-Immediate instructions
+
 void addi(reg* rd, reg rs1, int imm) {
     imm = truncate_12(imm);
     rd->value = rs1.value + imm;
@@ -56,7 +59,9 @@ void lui(reg* rd, int imm) {
 }
 
 
+
 // Register-Register instructions
+
 void add(reg*rd, reg rs1, reg rs2){
     rd->value = rs1.value + rs2.value;
 }
@@ -77,7 +82,7 @@ void and(reg* rd, reg rs1, reg rs2){
     rd -> value = rs1.value & rs2.value;
 }
 
-// Register-Register instructions
+
 void sll(reg* rd, reg rs1, reg rs2) {
     // Masking is used so that we can only shift up to 32 bits. 
     // We store the value 32 in these 5 bits, 
@@ -104,3 +109,16 @@ void sltu(reg* rd, reg rs1, reg rs2) {
                  val2 = rs2.value;
     rd->value = (val1 < val2) ? 1 : 0;
 }
+
+
+
+// Memory instructions
+
+void sw(reg rd, int imm, reg rs1) {
+    RAM[rs1.value + imm].data = rd.value;
+}
+
+void lw(reg* rs1, int imm, reg rd) {
+    rs1->value = RAM[rd.value + imm].data;
+}
+

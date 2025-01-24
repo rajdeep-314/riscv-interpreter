@@ -25,3 +25,8 @@ void srl(reg*, reg, reg);
 void sra(reg*, reg, reg);
 void slt(reg*, reg, reg);
 void sltu(reg*, reg, reg);
+
+
+// Memory instructions
+void sw(reg, int, reg);
+void lw(reg*, int, reg);

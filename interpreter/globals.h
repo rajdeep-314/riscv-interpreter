@@ -13,7 +13,7 @@ extern reg *zero, *ra, *sp, *gp, *tp, *t0, *t1, *t2, *s0, *fp,
     *s3, *s4, *s5, *s6, *s7, *s8, *s9, *s10, *s11, *t3,
     *t4, *t5, *t6;
 
-extern word* RAM;
+extern byte* RAM;
 
 void reg_setup(void);
 void mem_setup(int);
