@@ -16,9 +16,8 @@ int main() {
     print_regarr(regs, 5);
 
     // some instructions
-    addi(x1, *x0, 100);
-    slti(x2, *x1, 0xfff);
-    sltiu(x3, *x1, 0xfff);
-
+    addi(x3, *x0, 0x6ff);
+    addi(x1, *x0, 0x7ff);
+    xor(x2, *x1, *x3);
     print_regarr(regs, 5);
 }

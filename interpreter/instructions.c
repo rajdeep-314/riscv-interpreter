@@ -54,6 +54,26 @@ void sltiu(reg* rd, reg rs1, int imm) {
 void lui(reg* rd, int imm) {
     rd->value = imm << 12;
 }
+void add(reg*rd, reg rs1, reg rs2){
+    rd->value = rs1.value + rs2.value;
+}
+
+void sub(reg* rd, reg rs1, reg rs2){
+    rd -> value = rs1.value - rs2.value;
+}
+
+void xor(reg* rd, reg rs1, reg rs2){
+    rd -> value = rs1.value ^ rs2.value;
+}
+
+void or(reg* rd, reg rs1, reg rs2){
+    rd -> value = rs1.value | rs2.value;
+}
+
+void and(reg* rd, reg rs1, reg rs2){
+    rd -> value = rs1.value & rs2.value;
+}
+
 
 
 // Register-Register instructions
