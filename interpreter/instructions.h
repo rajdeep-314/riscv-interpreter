@@ -1,6 +1,7 @@
 // include the #IFNDEF stuff here in the future
 
 
+// Register-Immediate instructions
 void addi(reg*, reg, int);
 void xori(reg*, reg, int);
 void ori(reg*, reg, int);
@@ -13,6 +14,7 @@ void sltiu(reg*, reg, int);
 
 void lui(reg*, int);
 
+// Register-Register instructions
 void add(reg*, reg, reg);
 void sub(reg*, reg,reg);
 void xor(reg*, reg, reg);
